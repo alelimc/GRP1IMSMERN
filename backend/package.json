@@ -8,8 +8,8 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "backend": "nodemon server.js",
-    "build": "npm i"
+    "backend": "nodemon server.js"
+   
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
