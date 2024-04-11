@@ -1,0 +1,392 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+ 
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #242424; 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ */
+ *{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+ }
+
+body {
+  margin: 0;
+  /* display: flex; */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1bb1d6;
+ 
+  
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    /* background-color: #ffffff; */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.user-background{
+  background-color: bisque;
+}
+
+.home-background{
+  background-image: url(../src/assets/Background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+/* FOOTER AND NAVBAR */
+
+nav {
+ height: 60px;
+ background-color:  #1bb1d6;
+ font-size:x-large;
+ position: fixed;
+ width: 100%;
+ top: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+footer {
+  background-color: #beeafdb6;
+  color: #131313;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}  
+
+/* FONTS */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p{
+  color: black;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* BUTTONS */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.signin {
+  border-radius: 10px;
+  background-color: navy;
+}
+
+.signin:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* IMAGES */
+.logo{
+  vertical-align: middle;
+}
+
+.background-image {
+  background-image: url(''); /* URL to your background image */
+  background-size: cover; /* Cover the entire area of the element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-attachment: fixed; /* Make the background image fixed */
+  min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+}
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar-header {
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-menu li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Signin FORM */
+/* signin Container */
+.signin-container {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  height: 500px;
+  width: 400px;
+}
+
+/* Signin Form */
+.signin-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Title styling */
+.signin-form h2 {
+  margin-bottom: 20px; /* Adds space below the title */
+  font-size: 24px;
+  color: #333; /* Text color */
+}
+
+/* Label styling */
+.signin-form label {
+  display: block; /* Ensures labels are on their own lines */
+  margin-bottom: 8px; /* Adds space below each label */
+  font-size: 14px;
+  color: #333; /* Text color */
+}
+
+/* Input field styling */
+.signin-form input[type="email"],
+.signin-form input[type="password"] {
+  width: 95%; /* Makes input fields fill their container */
+  padding: 10px; /* Adds padding inside input fields */
+  margin-bottom: 16px; /* Adds space below each input field */
+  font-size: 16px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Button styling */
+.signin-form button {
+  width: 100%; /* Makes button fill its container */
+  padding: 12px; /* Adds padding inside button */
+  font-size: 16px;
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Background color */
+  border: none; /* Removes default button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+.signin-form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Signup link styling */
+.signup-link {
+  margin-top: 10px;
+}
+
+.signup-link span {
+  color: #007bff; /* Text color */
+  text-decoration: underline; /* Underline text to indicate it is clickable */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.signup-link span:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+/* Signup form */
+.signup-container {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+/* Card styling */
+.signup-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.signup-form h2 {
+  margin-bottom: 20px; /* Adds space below the title */
+  font-size: 24px;
+  color: #333; /* Text color */
+}
+
+/* Label styling */
+.signup-form label {
+  display: block; /* Ensures labels are on their own lines */
+  margin-bottom: 8px; /* Adds space below each label */
+  font-size: 14px;
+  color: #333; /* Text color */
+}
+
+/* Input field styling */
+.signup-form input[type="firstName"],
+.signup-form input[type="lastName"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 95%; /* Makes input fields fill their container */
+  padding: 10px; /* Adds padding inside input fields */
+  margin-bottom: 16px; /* Adds space below each input field */
+  font-size: 16px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Button styling */
+.signup-form button {
+  width: 100%; /* Makes button fill its container */
+  padding: 12px; /* Adds padding inside button */
+  font-size: 16px;
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Background color */
+  border: none; /* Removes default button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+.signup-form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Signin link styling */
+.signin-link {
+  margin-top: 10px;
+}
+
+.signin-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Welcome container */
+.welcome-container {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+/* Welcome description */
+.welcome-description {
+  max-width: 400px;
+}
+
+/* Title styling */
+.welcome-description h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.welcome-description p {
+  font-size: 25px;
+  line-height: 1.5;
+}
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center align button horizontally */
+}
+
+/* Button styling */
+.report-button {
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px; /* Add margin to separate from paragraph */
+}
+
+.report-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
